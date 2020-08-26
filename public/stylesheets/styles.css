@@ -1,0 +1,169 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+}
+
+body {
+    text-align: center;
+    margin: 0;
+    height: 100%;
+}
+
+:root {
+    --cell-size: 50px;
+    --border-size: 2px;
+    --mark-size: calc(var(--cell-size)*.8);
+    --inside-border-size: calc(var(--border-size)*.5);
+}
+
+.wrapper{
+    margin: 0 30px 30px 30px;
+}
+
+.credits {
+    margin: 40px;
+    font-size: 1.3rem;
+}
+
+.credits p {
+    margin: 0.5em;
+}
+
+.boards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.player,
+.cpu {
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+}
+
+.cell {
+    width: var(--cell-size);
+    height: var(--cell-size);
+    border-top: var(--inside-border-size) solid black;
+    border-left: var(--inside-border-size) solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color:rgb(153, 152, 150);
+}
+
+.player .cell{
+    cursor: not-allowed;
+}
+
+/* DYNAMIC PART */
+
+.cell.mark{
+    cursor: not-allowed;
+}
+
+.cell.mark.sunk {
+    background-color: rgb(142, 218, 55);
+}
+
+.cell.mark.sunk::before,
+.cell.mark.sunk::after {
+    background-color: black;
+}
+
+.cpu .cell:not(.mark):hover::before,
+.cpu .cell:not(.mark):hover::after {
+    background-color: lightgray;
+}
+
+.cpu .cell:not(.mark):hover::before,
+.cpu .cell:not(.mark):hover::after,
+.cell.mark.sunk::before,
+.cell.mark.sunk::after {
+    position: absolute;
+    content: "";
+    width: calc(var(--mark-size)*.15);
+    height: var(--mark-size);
+}
+
+.cpu .cell:not(.mark):hover::before,
+.cell.mark.sunk::before {
+    transform: rotate(45deg);
+}
+
+.cpu .cell:not(.mark):hover::after,
+.cell.mark.sunk::after {
+    transform: rotate(-45deg);
+}
+
+.mark[data-cell=""] {
+    background-color:rgb(0, 139, 161);
+}
+
+.mark:not([data-cell=""]){
+    background-color: rgb(142, 218, 55);
+}
+
+.player .cell:not(.mark)[data-cell=""] {
+    background-color:rgb(0,34,40);
+}
+
+.player .cell:not(.mark):not([data-cell=""]) {
+    background-color: rgb(35,54,13);
+}
+
+/* ------------------ */
+
+.winning-message {
+    display: none;
+    margin: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .9);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 5rem;
+    flex-direction: column;
+}
+  
+button {
+    font-size: 1.5rem;
+    background-color: white;
+    border: 1px solid black;
+    padding: .25em .5em;
+    cursor: pointer;
+}
+  
+button:hover {
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+
+button:focus {outline:0;}
+  
+.winning-message.show {
+    display: flex;
+}
+
+.reward {
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+@media (max-width: 530px) {
+    :root {
+        --cell-size: 30px;
+    }
+
+    body {
+        min-width: 340px;
+    }
+}

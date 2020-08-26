@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="/javascripts/board.js" defer></script>
+    <script src="/javascripts/cpu.js" defer></script>
+    <script src="/javascripts/script.js" defer></script>
+    <title>Battleship War</title>
+</head>
+<body>
+
+<h1>Battleship War</h1>
+<div class="boards">
+    <div class="wrapper">
+        <h2>Player Board</h2>
+        <div class="player">
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <h2>CPU Board</h2>
+        <div class="cpu">
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+            <div class="cell" data-cell data-number></div>
+        </div>
+    </div>
+</div>
+
+<button id="firstButton" class="restart-button">Restart</button>
+
+<div class="credits">
+    <p>Created by: <strong>Tulio Vieira</strong></p>
+    <p><a href="https://github.com/tulio-vieira/"><i class="fa fa-github" aria-hidden="true"></i>/tulio-vieira</a></p>
+</div>
+
+</div>
+    <div id="winningMessage" class="winning-message">
+        <div data-winning-message-text >Hi I see you there <span>whaddup</span></div>
+        <div data-winning-reward class="reward"></div>
+        <button id="secondButton" class="restart-button">Restart</button>
+    </div>
+</div>
+
+</body>
+</html>
