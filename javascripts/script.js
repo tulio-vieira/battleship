@@ -189,7 +189,13 @@ function changeCSSAux(shipPositions, direction, boardName, style){
 function resetCSS(){
     for (key in boards) {
         for (let i = 0; i < 100; i++) {
-            GUIBoardsCells[key][i].style.borderWidth = "1px 0 0 1px";
+            GUIBoardsCells[key][i].style.border = "1px solid black";
+        }
+        for (let i = 0; i < 10; i++){
+            GUIBoardsCells[key][i].style.borderTop = "2px solid black";
+            GUIBoardsCells[key][10*i].style.borderLeft = "2px solid black";
+            GUIBoardsCells[key][10*i + 9].style.borderRight = "2px solid black";
+            GUIBoardsCells[key][i + 90].style.borderBottom = "2px solid black";
         }
     }
 }
